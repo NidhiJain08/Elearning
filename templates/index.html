@@ -1,0 +1,212 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .header-image img{
+        height: 400px;
+        width: 500px;
+        position:relative;
+        border: 1px solid white;
+            border-radius:15px;
+        top:30px;
+    }
+    .header-image{
+        top: 10%;
+            right: 10%;
+            position: absolute;
+            
+    }
+    #header{
+        height: 600px;
+            position: relative;
+            background-color: white;
+            margin-bottom: 30px;        
+    }
+    .header-text{
+        position: absolute; 
+            top: 30%; 
+            left: 10%;
+            right: 50%; 
+            font-size: 65px;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+    }
+    #students {
+        margin: 20px 50px;
+        height: 200px;
+    }
+
+    .heading h3{
+        margin-top: 40px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .logo{
+        width: 20%;
+        margin: 20px 30px;
+        float: left;
+        position: relative;
+        text-align: center;
+    }
+
+    .logo img{
+        height: 150px;
+        width: 150px;
+        position: relative;
+        left:350px;
+    }
+    /* top-selling courses */
+
+    .card {
+    box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+    }
+
+    #top-courses {
+        margin: 25px 120px;
+        position:relative;
+        left:200px;
+    }
+    .course-image {
+        height: 240px;
+        width: 100%;
+    }
+    .competition-content h5{
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+    }
+    .text-color{
+        color: black;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+    /* footer */
+
+        .footer-dark {
+        padding:50px 0;
+        color:#f0f9ff;
+        background-color:#282d32;
+        }
+
+        .footer-dark h3 {
+        margin-top:0;
+        margin-bottom:12px;
+        font-weight:bold;
+        font-size:16px;
+        }
+
+        .footer-dark ul {
+        padding:0;
+        list-style:none;
+        line-height:1.6;
+        font-size:14px;
+        margin-bottom:0;
+        }
+
+        .footer-dark ul a {
+        color:inherit;
+        text-decoration:none;
+        opacity:0.6;
+        }
+
+        .footer-dark ul a:hover {
+        opacity:0.8;
+        }
+
+        .footer-dark .item.text {
+        margin-bottom:36px;
+        }
+
+        .footer-dark .item.text p {
+        opacity:0.6;
+        margin-bottom:0;
+        }
+
+        .footer-dark .item.social {
+        text-align:center;
+        }
+
+</style>
+
+    <section id="header">
+        <h3 class="header-text">Learn anywhere,anytime</h3>
+        <div class="header-image">
+            <img src="{% static 'java.jpg' %}" alt="">
+        </div>
+    </section>
+    <hr>
+    <div class="heading"> 
+        <h3>We have students from different colleges and companies</h3>
+    </div>
+    <section id="students">
+        <div class="logo">
+            <img src="{% static 'iit-b.png' %}" alt="">
+        </div>
+        <div class="logo">
+            <img src="{% static 'apple.jpg' %}" alt="">
+        </div>
+    </section>
+
+    <div class="heading">
+        <h3>Top-selling Courses</h3>
+    </div>
+    <section id="top-courses">
+        <div class="row">
+        <div class="col-lg-4 mb-4 d-flex align-items-stretch">
+            <div class="card card-bg">
+                <img src="{% static 'python.jpg' %}" alt="" class="card-img-top course-image">
+                <div class="card-body"> 
+                    <div class="course-content">
+                        <h5 class="card-title">Python For Beginners</h5>
+                        <p class="card-text text-color">This Python For Beginners Course Teaches You The Python Language Fast. Includes Python Online Training With Python 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4 d-flex align-items-stretch">
+            <div class="card card-bg">
+                <img src="{% static 'python.jpg' %}" alt="" class="card-img-top course-image">
+                <div class="card-body"> 
+                    <div class="course-content">
+                        <h5 class="card-title">Advanced Java</h5>
+                        <p class="card-text text-color">Learn Java And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 item text">
+                        <h3>Location</h3>
+                        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+                        <p class="mb-0"><i class="fa fa-phone mr-3"></i>554-3410</p>
+                        <p><i class="fa fa-envelope-o mr-3"></i>info@elearning.com</p>
+                    </div>
+                    <div class="col-lg-4 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col item social">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">E-learning © 2024</p>
+            </div>
+        </footer>
+    </div>
+    
+    
+{% endblock %}
